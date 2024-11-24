@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Store</title>
+  <link rel="stylesheet" href="mac.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Apple</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Store</a></li>
+        <li><a href="#mac">Mac</a></li>
+        <li><a href="#ipad">iPad</a></li>
+        <li><a href="#iphone">iPhone</a></li> 
+        <li><a href="#watch">Watch</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>iPhone 15 Pro</h1>
+    <p>So. Pro.</p>
+    <div class="buttons">
+      <a href="#" class="button">Learn More</a>
+      <a href="#" class="button">Buy</a>
+    </div>
+  </section>
+  
+  <!-- Mac Section -->
+  <section id="mac" class="macbook-section">
+    <h2>MacBook Models</h2>
+    <div class="macbook-list">
+      <div class="macbook-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnyIiUE9hZzjt93l3HdSByDcQwniCWAeeKUA&s" alt="MacBook Air">
+        <p>MacBook Air</p>
+        <p>Starting from $999.00</p>
+        <button class="button" onclick="addToCart('MacBook Air', 999)">Add to Cart</button>
+      </div>
+      <div class="macbook-item">
+        <img src="https://www.jbhifi.co.nz/cdn/shop/files/437536-Product-0-I-638451948648478593.jpg?v=1716512607" alt="MacBook Pro 13">
+        <p>MacBook Pro 13"</p>
+        <p>Starting from $1,299.00</p>
+        <button class="button" onclick="addToCart('MacBook Pro 13', 1299)">Add to Cart</button>
+      </div>
+      <div class="macbook-item">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295" alt="MacBook Pro 14 & 16">
+        <p>MacBook Pro 14" & 16"</p>
+        <p>Starting from $1,599.00</p>
+        <button class="button" onclick="addToCart('MacBook Pro 14 & 16', 1599)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="ipad" class="ipad-section">
+    <h2>iPad Models</h2>
+    <div class="ipad-list">
+      <div class="ipad-item">
+        <img src="https://cdnp.cody.mn/spree/images/1101186/large/1.jpg" alt="iPad Air">
+        <p>iPad Air</p>
+        <p>Starting from $599.00</p>
+        <button class="button" onclick="addToCart('iPad Air', 599)">Add to Cart</button>
+      </div>
+      <div class="ipad-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz5A2iKEh48QwMDeyoKEfDHkRyU1_JDdadJw&s" alt="iPad Pro">
+        <p>iPad Pro</p>
+        <p>Starting from $999.00</p>
+        <button class="button" onclick="addToCart('iPad Pro', 999)">Add to Cart</button>
+      </div>
+      <div class="ipad-item">
+        <img src="https://cdnp.cody.mn/spree/images/2285105/large/1.Ipad_mini_purple_1.jpg?1712032419" alt="iPad Mini">
+        <p>iPad Mini</p>
+        <p>Starting from $499.00</p>
+        <button class="button" onclick="addToCart('iPad Mini', 499)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="iphone" class="iphone-section">
+    <h2>iPhone Models</h2>
+    <div class="iphone-list">
+      <div class="iphone-item">
+        <img src="https://www.greentelcom.ph/wp-content/uploads/2022/09/website-template-2024-04-25T091559.437.png" alt="iPhone 14">
+        <p>iPhone 14</p>
+        <p>Starting from $799.00</p>
+        <button class="button" onclick="addToCart('iPhone 14', 799)">Add to Cart</button>
+      </div>
+      <div class="iphone-item">
+        <img src="https://dphtbnmpp0f6d.cloudfront.net/media/catalog/product/cache/7a02b6895a882fc54e7944e5173e1887/i/p/iphone_14_pro_max_space_black_full_cover_a9b8.jpg" alt="iPhone 14 Pro">
+        <p>iPhone 14 Pro</p>
+        <p>Starting from $999.00</p>
+        <button class="button" onclick="addToCart('iPhone 14 Pro', 999)">Add to Cart</button>
+      </div>
+      <div class="iphone-item">
+        <img src="https://powermaccenter.com/cdn/shop/files/iPhone_SE3_ProductRED_PDP_Image_Position-1A__en-US_97644679-35fe-4000-8525-d0c0bab3df48.jpg?v=1689790621&width=1445" alt="iPhone SE">
+        <p>iPhone SE</p>
+        <p>Starting from $429.00</p>
+        <button class="button" onclick="addToCart('iPhone SE', 429)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="watch" class="watch-section">
+    <h2>Apple Watch Models</h2>
+    <div class="watch-list">
+      <div class="watch-item">
+        <img src="https://idestiny.in/wp-content/uploads/2024/10/Apple_Watch_Ultra_2_49mm_Natural_Titanium_Milanese_Loop_Natural_PDP_Image_Position_2__en-IN-600x600.jpg" alt="Apple Watch Ultra 2">
+        <p>Apple Watch Ultra 2</p>
+        <p>Starting from $799.00</p>
+        <button class="button" onclick="addToCart('Apple Watch Ultra 2', 799)">Add to Cart</button>
+      </div>
+      <div class="watch-item">
+        <img src="https://www.apple.com/newsroom/images/2023/09/apple-introduces-the-advanced-new-apple-watch-series-9/article/Apple-Watch-S9-graphite-stainless-steel-FineWoven-Magenetic-Link-green-230912_inline.jpg.large.jpg" alt="Apple Watch Series 9">
+        <p>Apple Watch Series 9</p>
+        <p>Starting from $399.00</p>
+        <button class="button" onclick="addToCart('Apple Watch Series 9', 399)">Add to Cart</button>
+      </div>
+      <div class="watch-item">
+        <img src="https://shop.switch.com.my/cdn/shop/files/Apple_Watch_Series_10_42mm_LTE_Jet_Black_Aluminum_Sport_Band_Black_PDP_Image_Position_1__GBEN_dd2cbfe0-88ce-4e19-ab4a-54036185cae7.jpg?v=1727183117" alt="Apple Watch SE">
+        <p>Apple Watch SE</p>
+        <p>Starting from $249.00</p>
+        <button class="button" onclick="addToCart('Apple Watch SE', 249)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+<section id="cart" class="cart-section hidden">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Total: $0</p>
+  <button class="button checkout">Checkout</button>
+</section>
+
+  <footer>
+    <p>© 2024 Apple Inc. All rights reserved.</p>
+  </footer>
+
+  <script src="mac.js"></script>
+</body>
+</html>
